@@ -42,3 +42,10 @@
               //seconds
             }, 0)
         }());
+        var audio = new Audio('./audio/Lou_Bega_-_Mambo_No_5_A_Little_Bit_of__Qoret.com.mp3');
+        var play = document.getElementById('play');
+        play.onclick = function() {
+            audio.play(); 
+            alert("Playing Mambo Number 5 Enjoy");
+         };
+        
