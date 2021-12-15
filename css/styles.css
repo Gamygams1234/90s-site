@@ -1,0 +1,207 @@
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: url(../images/vanquishlogo.png);
+  background-size: 12%;
+}
+
+@-webkit-keyframes myAnim {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+.mb-2 {
+  margin-bottom: 2em;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.header {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rotating-image {
+  -webkit-transform: rotateX(0deg) rotateY(37deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(37deg) rotateZ(0deg);
+  -webkit-animation-name: myAnim;
+          animation-name: myAnim;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  height: 7em;
+}
+
+.section-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2em 3fr;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2em;
+}
+.section-1 .text {
+  color: aquamarine;
+  padding-right: 3em;
+}
+.section-1 .text .yellow {
+  color: yellow;
+}
+.section-1 .text .pink {
+  color: #ac1956;
+}
+.section-1 .text .lime-green {
+  color: limegreen;
+}
+.section-1 .nav {
+  background-color: magenta;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+.section-1 .nav .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+.section-1 .nav .link img {
+  height: 7em;
+}
+.section-1 .nav .link a {
+  margin-left: 1em;
+  font-size: 1.5em;
+  color: limegreen;
+  margin-bottom: 1em;
+}
+.section-1 .link:hover {
+  background-color: yellow;
+}
+
+.countdown {
+  /* general styling */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.countdown :root {
+  --smaller: 0.75;
+}
+.countdown * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.countdown html,
+.countdown body {
+  height: 100%;
+  margin: 0;
+}
+.countdown .container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+.countdown h1 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  color: #00db96;
+}
+.countdown .days {
+  color: #e10086;
+}
+.countdown .hours {
+  color: #fdfb76;
+}
+.countdown .minutes {
+  color: #49297e;
+}
+.countdown .seconds {
+  color: #90dcff;
+}
+.countdown li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+.countdown li span {
+  display: block;
+  font-size: 4.5rem;
+}
+.countdown .emoji {
+  display: none;
+  padding: 1rem;
+}
+.countdown .emoji span {
+  font-size: 4rem;
+  padding: 0 0.5rem;
+}
+@media all and (max-width: 768px) {
+  .countdown h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  .countdown li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  .countdown li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
